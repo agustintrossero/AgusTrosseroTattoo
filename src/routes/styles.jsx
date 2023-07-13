@@ -2,7 +2,7 @@
 export default function styles() {
   return (
     <>
-      <h3>Styles Page</h3>
+      <h1 className="heading">Styles Page</h1>
     </>
   )
 }

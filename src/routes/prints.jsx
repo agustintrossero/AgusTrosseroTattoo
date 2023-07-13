@@ -3,7 +3,7 @@
 export default function prints() {
   return (
     <>
-      Prints Page
+      <h1 className="heading">Prints Page</h1>
     </>
   )
 }

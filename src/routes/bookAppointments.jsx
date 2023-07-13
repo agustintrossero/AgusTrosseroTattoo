@@ -2,7 +2,7 @@
 export default function bookAppointments() {
   return (
     <>
-      Book Appointments Page
+      <h1 className="heading">Book Appointments Page</h1>
     </>
   )
 }

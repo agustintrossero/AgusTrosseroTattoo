@@ -1,9 +1,12 @@
-
+import cart from '../../public/img/carrito.png'
+import { NavLink } from 'react-router-dom'
 
 export default function CartWidget() {
   return (
-    <div>
-      Soy un icono de carrito
-    </div>
+    <>
+        <NavLink to='/cart'>
+          <img src={cart} alt="cart" />
+        </NavLink>
+    </>
   )
 }
