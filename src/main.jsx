@@ -5,30 +5,20 @@ import Styles from './routes/styles'
 import Prints from './routes/prints'
 import BookAppointments from './routes/bookAppointments'
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Root />
-  },
-  {
-    path: '/styles',
-    element: <Styles/>
-  },
-  {
-    path: '/prints',
-    element: <Prints/>
-  },
-  {
-    path: '/book-appointments',
-    element: <BookAppointments/>
-  },
-])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Root/>}>
+          <Route path='styles' element={<Styles/>}/>
+          <Route path='prints' element={<Prints/>}/>
+          <Route path='book-appointments' element={<BookAppointments/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
 )
