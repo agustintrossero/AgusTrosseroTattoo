@@ -1,5 +1,5 @@
 import CartWidget from "./CartWidget"
-import { NavLink, Outlet } from "react-router-dom"
+import { NavLink} from "react-router-dom"
 
 export default function NavBar() {
   return (
@@ -11,9 +11,6 @@ export default function NavBar() {
         <NavLink to="/book-appointments" className="category">Book Appointment</NavLink>
         <CartWidget/>
       </nav>  
-      <section>
-        <Outlet></Outlet>
-      </section>
     </>
   )
 }

@@ -6,6 +6,7 @@ export default function CartWidget() {
     <>
         <NavLink to='/cart'>
           <img src={cart} alt="cart" />
+          0
         </NavLink>
     </>
   )
