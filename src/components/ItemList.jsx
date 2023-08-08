@@ -1,24 +1,19 @@
 import Item from "./Item"
+import { Link } from "react-router-dom"
 
-async function getProductos(){
-    const response = await fetch('https://fakestoreapi.com/products')
-    const result = await response.json()
-    console.log(result)
-    return result
-}
-getProductos()
+export default function ItemList({ products }) {
 
-export default function ItemList({products}) {
   return (
     <>
-        {products.map((product)=>{
-            return(
-                <Item
-                key={product.id}
-                product={product}
-                />
-            )
-        })}
+      <h2 className="heading">List of prints</h2>
+      <div className="card-grid">
+        {products.map(product => (
+          <Item
+            key={product.id}
+            product={product}
+          />
+        ))}
+      </div>
     </>
   )
 }

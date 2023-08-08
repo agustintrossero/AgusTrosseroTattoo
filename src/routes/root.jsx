@@ -1,5 +1,4 @@
 import Header from '../components/Header'
-import ItemListContainer from '../components/ItemListContainer'
 import { Outlet } from 'react-router-dom'
 
 export default function Root() {
@@ -8,9 +7,6 @@ export default function Root() {
     <>
       <Header/>
       <Outlet/>      
-      <ItemListContainer
-        greetings="Welcome"
-      />
     </>
   )
 }

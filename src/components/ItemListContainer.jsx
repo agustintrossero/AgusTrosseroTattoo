@@ -1,35 +1,23 @@
 import ItemList from "./ItemList"
+import products from "../../public/data/prints"
+import { useParams, Link } from "react-router-dom"
 
 export default function ItemListContainer() {
+  const { category } = useParams()
 
-  const products = [
-    {id: 1, name: "Light Snake", description: "Pencil on A4 paper", stock: 10},
-    {id: 2, name: "Sword Snake", description: "Pencil on A4 paper", stock: 10}, 
-    {id: 3, name: "Skull Snake", description: "Pencil on A4 paper", stock: 10}
-  ]
-
-const getProducts = new Promise((resolve, reject) => {
-  if (products.length > 0) {
-    setTimeout(()=>{
-      resolve(products)
-    }, 2000)
-  } else{
-    reject(new Error("No products"))
-  }
-})
-
-getProducts
-  .then((res)=>{
-    console.log(res)
-  })
-  .catch((error)=>{
-    console.log(error)
-  })
+  const filteredProducts = products.filter(product => product.category.name === category);
 
   return (
     <>
+      <div className="nav-bar">
+        <Link className="category" to={"/prints"}>-- All Categories --</Link>
+        <Link className="category" to={`/category/${'rose'}`}>El Rose Collection</Link>
+        <Link className="category" to={`/category/${'snake'}`}>Snake Collection</Link>
+        <Link className="category" to={`/category/${'birds'}`}>Birds Collection</Link>
+        <Link className="category" to={`/category/${'fire'}`}>Fire Collection</Link>
+      </div>
       <ItemList
-        products={products}
+        products={filteredProducts}
       />
     </>
   )
