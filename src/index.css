@@ -82,6 +82,10 @@ header{
   }
 }
 
+.print-nav-bar{
+  background-color: black
+}
+
 .header .nav-bar a{
   color: white;
   text-decoration: none;

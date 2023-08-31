@@ -1,5 +1,5 @@
-import NavBar from "./NavBar"
 import { Link } from "react-router-dom"
+import NavBar from "./NavBar"
 
 export default function Header() {
   return (

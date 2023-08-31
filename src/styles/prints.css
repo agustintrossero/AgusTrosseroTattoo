@@ -1,7 +1,12 @@
+#root{
+  background-color: #242424;
+}
+
 .card-grid{
     display: grid;
     grid-template-columns: 1fr;
     gap: 4rem;
+    padding: 0rem 5rem;
 }
 
 .card{
@@ -9,9 +14,126 @@
     grid-template-columns: 2fr 3fr;
     gap: 1rem;
     align-items: center;
-    max-width: 70rem;
+    max-width: 40rem;
     margin: 0 auto;
+
 }
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+[class*="container"], 
+main {
+  width: min(95%, 120rem);
+  margin: 3rem auto;
+}
+
+[class*="heading"] {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+  color: white;
+  margin: 5rem 0;
+}
+
+.detail-card{
+  display: grid;
+  gap: 0.2rem;
+  align-items: center;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+#image{
+  max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.d-description{
+  color: #fff;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    font-size: 1.8rem;
+}
+  .d-category{
+    color: #fff;
+}
+
+.custom-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.custom-btn-cart {
+  background-color: #E94560; 
+  border-color: #E94560; 
+  color: #fff; 
+}
+
+.custom-btn-cart:hover,
+.custom-bt-cart:focus {
+  background-color: #D4344E; 
+  border-color: #D4344E; 
+}
+
+.content{
+  display: flex;
+  justify-content: space-around;
+  background-color: #8b8284;
+  padding-top: 1.5rem;
+}
+
+/* ItemCount */
+
+.item-count-card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 133px;
+  background-color: #f1f1f1;
+  margin-bottom: 2rem;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.count {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #444;
+}
+
+.count-button {
+    background-color: #333; 
+    border-color: #333;
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.count-button:hover {
+    background-color: #E94560; 
+    border-color: #E94560; 
+
+}
+
 
 @media (min-width: 768px){
     .card-grid{
@@ -26,7 +148,28 @@
 
 
 .card-content{
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
+}
+
+.card-content .description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    font-size: 1.8rem;
+}
+
+.price {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 900;
+}
+
+#see-print{
+  display: flex;
+  align-items: flex-end;
 }
 
 .link{
@@ -41,6 +184,7 @@
     font-size: 1.4rem;
     font-weight: 900;
 }
+
 
 h3{
     font-size: 3rem;
@@ -82,3 +226,72 @@ h3{
     background-color: orange;
   }
   
+
+  /* form buttons styles */
+
+.secondary {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.secondary:hover,
+.secondary:focus {
+  background-color: #222;
+  border-color: #222;
+}
+
+.primary {
+  background-color: #E94560;
+  border-color: #E94560;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.primary:hover,
+.primary:focus {
+  background-color: #D4344E;
+  border-color: #D4344E;
+}
+
+/* cart */
+.trash-icon {
+  color: #E94560; 
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.cart-empty{
+  color: #fff;
+}
+
+/* checkout form */
+
+.has-error .form-control {
+  border-color: red;
+}
+.has-error .error-message {
+  color: red;
+}
+
+.label{
+  color:#fff
+}
+
+.margin-bottom{
+  background-color: #414040;
+  border: solid 0.5px #fff;
+  border-radius: 1.5rem;
+  padding-bottom: 1rem;
+
+}
+
+.checkout{
+  color: #fff;
+  font-size: 2rem;
+}
